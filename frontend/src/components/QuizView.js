@@ -131,11 +131,11 @@ class QuizView extends Component {
     )
   }
 
-  containsAll = (question, answer) => {
+  containsAll = (guess, answer) => {
     if(answer[0] === 'the' || answer[0] === 'a'){
       answer.shift()
     }
-    return answer.every(v => question.includes(v))
+    return answer.every(v => guess.includes(v))
   }
 
   evaluateAnswer = () => {
